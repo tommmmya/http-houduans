@@ -1,0 +1,23 @@
+{ pkgs ? import <nixpkgs> { overlays = [(import /etc/nix/nixpkgs-showmebug/overlay.nix)];} }:
+pkgs.mkShell {
+    shellHook = ''
+        alias ll="ls -l"
+        export PS1="\[\e[0m\]\w\[\e[0m\]#\[\e[0m\] "
+        export LANG=en_US.UTF-8
+    '';
+    packages = [
+        # env
+        pkgs.nodejs-16_x
+        pkgs.nodePackages.yarn
+        pkgs.nodePackages.typescript
+        pkgs.replitPackages.jest
+        pkgs.nodePackages.browser-sync
+        pkgs.mysql57
+        pkgs.mongodb
+        pkgs.redis
+        pkgs.postgresql
+        # lsp
+        pkgs.nodePackages.typescript-language-server
+        pkgs.glibcLocales
+    ];
+}

@@ -4,6 +4,4 @@
 
 
 该项目共有四个账号，一个为管理员，三个为用户，账号名分别为用户1，用户2，用户3
-演示地址请点击（注意开启服务器服务） 
-前端1024code地址为https://1024code.com/ide/hlgwvrn 
-后端1024code地址为https://1024code.com/ide/pkefikd
+演示地址请点击https://1024code.com/ide/zghro5i#/web/vite.config.js
